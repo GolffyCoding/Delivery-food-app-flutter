@@ -1,0 +1,24 @@
+name: opendelivery_sync
+description: Offline-first sync engine with idempotency
+publish_to: none
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  opendelivery_core:
+    path: ../core
+  opendelivery_network:
+    path: ../network
+  shared_preferences: ^2.3.3
+  connectivity_plus: ^6.1.1
+  dio: ^5.7.0
+  uuid: ^4.5.1
+  equatable: ^2.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0

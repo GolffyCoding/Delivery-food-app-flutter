@@ -1,0 +1,40 @@
+name: driver_app
+description: OpenDelivery Driver App
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  opendelivery_core:
+    path: ../../packages/core
+  opendelivery_network:
+    path: ../../packages/network
+  opendelivery_design_system:
+    path: ../../packages/design_system
+  opendelivery_shared_widgets:
+    path: ../../packages/shared_widgets
+  opendelivery_state_machine:
+    path: ../../packages/state_machine
+  opendelivery_sync:
+    path: ../../packages/sync
+  opendelivery_auth:
+    path: ../../packages/auth
+
+  flutter_bloc: ^8.1.6
+  equatable: ^2.0.7
+  go_router: ^14.6.2
+  get_it: ^8.0.3
+  connectivity_plus: ^6.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true

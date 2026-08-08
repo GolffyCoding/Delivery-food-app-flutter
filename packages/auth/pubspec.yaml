@@ -1,0 +1,20 @@
+name: opendelivery_auth
+description: OpenDelivery authentication package
+publish_to: none
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  opendelivery_core:
+    path: ../core
+  opendelivery_network:
+    path: ../network
+  equatable: ^2.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0

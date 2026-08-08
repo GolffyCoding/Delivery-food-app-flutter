@@ -1,0 +1,49 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'app_colors.dart';
+
+/// Application text styles using Google Fonts.
+abstract final class AppTextStyles {
+  static TextTheme get textTheme => GoogleFonts.interTextTheme(_baseTextTheme);
+
+  static const TextTheme _baseTextTheme = TextTheme(
+    displayLarge: TextStyle(fontSize: 57, fontWeight: FontWeight.w400, letterSpacing: -0.25),
+    displayMedium: TextStyle(fontSize: 45, fontWeight: FontWeight.w400, letterSpacing: 0),
+    displaySmall: TextStyle(fontSize: 36, fontWeight: FontWeight.w400, letterSpacing: 0),
+    headlineLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.w600, letterSpacing: 0),
+    headlineMedium: TextStyle(fontSize: 28, fontWeight: FontWeight.w600, letterSpacing: 0),
+    headlineSmall: TextStyle(fontSize: 24, fontWeight: FontWeight.w600, letterSpacing: 0),
+    titleLarge: TextStyle(fontSize: 22, fontWeight: FontWeight.w600, letterSpacing: 0),
+    titleMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, letterSpacing: 0.15),
+    titleSmall: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, letterSpacing: 0.1),
+    bodyLarge: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, letterSpacing: 0.5),
+    bodyMedium: TextStyle(fontSize: 14, fontWeight: FontWeight.w400, letterSpacing: 0.25),
+    bodySmall: TextStyle(fontSize: 12, fontWeight: FontWeight.w400, letterSpacing: 0.4),
+    labelLarge: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, letterSpacing: 0.1),
+    labelMedium: TextStyle(fontSize: 12, fontWeight: FontWeight.w500, letterSpacing: 0.5),
+    labelSmall: TextStyle(fontSize: 11, fontWeight: FontWeight.w500, letterSpacing: 0.5),
+  );
+
+  static TextStyle get heading1 => textTheme.headlineLarge!;
+  static TextStyle get heading2 => textTheme.headlineMedium!;
+  static TextStyle get heading3 => textTheme.headlineSmall!;
+  static TextStyle get title => textTheme.titleLarge!;
+  static TextStyle get subtitle => textTheme.titleMedium!;
+  static TextStyle get body => textTheme.bodyLarge!;
+  static TextStyle get bodySmall => textTheme.bodyMedium!;
+  static TextStyle get caption => textTheme.bodySmall!;
+  static TextStyle get button => textTheme.labelLarge!;
+  static TextStyle get label => textTheme.labelMedium!;
+
+  static TextStyle get price => textTheme.headlineSmall!.copyWith(
+        fontWeight: FontWeight.w700,
+        color: AppColors.brandPrimary,
+      );
+
+  static TextStyle get discount => textTheme.labelLarge!.copyWith(
+        color: AppColors.error,
+        fontWeight: FontWeight.w700,
+      );
+
+  static TextStyle get rating => textTheme.labelMedium!.copyWith(color: AppColors.neutral700);
+}
