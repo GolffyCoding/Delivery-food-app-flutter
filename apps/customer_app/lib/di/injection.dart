@@ -72,7 +72,7 @@ Future<void> configureDependencies() async {
   // AuthBloc is a singleton: GoRouter's redirect logic and every page need to
   // observe the *same* auth session, not independent copies.
   getIt.registerLazySingleton(() => AuthBloc(getIt<GetCurrentUserUseCase>(), getIt<LogoutUseCase>()));
-  getIt.registerFactory(() => LoginBloc(getIt<LoginUseCase>()));
+  getIt.registerFactory(() => LoginBloc(getIt<LoginUseCase>(), getIt<RegisterUseCase>()));
   getIt.registerFactory(() => RegisterBloc(getIt<RegisterUseCase>()));
   getIt.registerFactory(() => HomeBloc(getIt<RestaurantRepository>()));
   getIt.registerFactory(() => RestaurantBloc(getIt<RestaurantRepository>()));

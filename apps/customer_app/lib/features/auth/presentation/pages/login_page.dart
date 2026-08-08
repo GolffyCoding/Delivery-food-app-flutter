@@ -94,6 +94,17 @@ class _LoginPageState extends State<LoginPage> {
                             return AppButton(text: 'Sign In', onPressed: () => _onLogin(context), isLoading: state is LoginLoading);
                           },
                         ),
+                        const SizedBox(height: AppSpacing.md),
+                        Center(
+                          child: BlocBuilder<LoginBloc, LoginState>(
+                            builder: (context, state) {
+                              return AppTextButton(
+                                text: 'Try Demo Account',
+                                onPressed: state is LoginLoading ? null : () => context.read<LoginBloc>().add(const LoginDemo()),
+                              );
+                            },
+                          ),
+                        ),
                         const SizedBox(height: 32),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
